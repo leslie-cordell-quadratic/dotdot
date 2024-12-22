@@ -100,8 +100,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-
-
+# https://github.com/starship/starship/blob/master/README.md
+# Enable Starship
+eval "$(starship init zsh)"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -125,3 +126,4 @@ alias mks="minikube start --cpus=4 --memory=8192 --disk-size=30g --driver=docker
 [[ $commands[kubectl] ]] && source <(kubectl completion zsh)
 export PATH="/opt/homebrew/opt/php@8.1/bin:$PATH"
 export PATH="/opt/homebrew/opt/php@8.1/sbin:$PATH"
+

@@ -1,5 +1,7 @@
 #/bin/bash
 cd ~
+# Install OhMyZsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 # Install starship.
 curl -sS https://starship.rs/install.sh | sh
 # Link files.

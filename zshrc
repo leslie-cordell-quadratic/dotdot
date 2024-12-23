@@ -112,18 +112,12 @@ export GPG_TTY=$(tty)
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# https://www.josean.com/posts/how-to-setup-alacritty-terminal
-# ---- Eza (better ls) -----
-alias ls="eza --icons=always"
 # ---- Zoxide (better cd) ----
 eval "$(zoxide init zsh)"
-alias cd="z"
-alias k="kubectl"
-alias kd='kubectl $* --dry-run=client -o yaml'
-alias m="minikube"
-alias mk="minikube $* --profile=msgnest"
-alias mks="minikube start --cpus=4 --memory=8192 --disk-size=30g --driver=docker --profile=msgnest"
 [[ $commands[kubectl] ]] && source <(kubectl completion zsh)
 export PATH="/opt/homebrew/opt/php@8.1/bin:$PATH"
 export PATH="/opt/homebrew/opt/php@8.1/sbin:$PATH"
 
+set -a
+source ~/.dot/alias
+set +a

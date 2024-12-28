@@ -6,4 +6,5 @@ alias k="kubectl"
 alias kd='kubectl $* --dry-run=client -o yaml'
 alias m="minikube"
 alias mk="minikube $* --profile=msgnest"
-alias mks="minikube start --cpus=4 --memory=8192 --disk-size=30g --driver=docker --profile=msgnest"
+alias mk1="minikube start --cpus=4 --memory=8192 --disk-size=30g --driver=docker --profile=msgnest"
+alias mk0="minikube stop --profile=msgnest" 
